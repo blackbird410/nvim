@@ -15,10 +15,10 @@ vim.keymap.set('n', '<leader>fb', ':lua require("telescope.builtin").buffers()<C
 vim.keymap.set('n', '<leader>fh', ':lua require("telescope.builtin").help_tags()<CR>')
 
 -- Inline math: $...$
-vim.keymap.set("i", "<Leader>m", "$<++>$<Left><Left><Left>")
+-- vim.keymap.set("i", "<Leader>m", "$<++>$<Left><Left><Left>")
 
 -- Block math: $$...$$
-vim.keymap.set("i", "<Leader>M", "$$\n<++>\n$$<Esc>kA", { noremap = true })
+-- vim.keymap.set("i", "<Leader>M", "$$\n<++>\n$$<Esc>kA", { noremap = true })
 
 
 -- n, v, i, t = mode names
