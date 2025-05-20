@@ -40,6 +40,7 @@ require("lazy").setup({
   opts = {
     ensure_installed = {
       "pyright",
+      "clangd",
     }
   },
 })
