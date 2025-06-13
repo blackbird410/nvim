@@ -24,24 +24,18 @@ require("lazy").setup({
 	"williamboman/mason.nvim",
 	"williamboman/mason-lspconfig.nvim",
 	"neovim/nvim-lspconfig",
-	{
-		"zbirenbaum/copilot.lua",
-		cmd = "Copilot",
-		build = ":Copilot auth",
-		event = "InsertEnter",
-		config = function()
-			require("copilot").setup({
-				suggestion = { enabled = true },
-				panel = { enabled = false },
-			})
-		end,
-	},
 	"folke/noice.nvim",
 	event = "VeryLazy",
 	dependencies = {
 		"MunifTanjim/nui.nvim",
 		"rcarriga/nvim-notify",
 	},
+	  {
+			"zbirenbaum/copilot.lua",
+			cmd = "Copilot",
+			build = ":Copilot auth",
+			event = "InsertEnter",
+		},
 	{
 		"mfussenegger/nvim-jdtls",
 		ft = { "java" },
