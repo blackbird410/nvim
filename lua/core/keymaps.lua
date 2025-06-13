@@ -24,6 +24,22 @@ vim.keymap.set("n", "<leader>e", function()
 	vim.diagnostic.open_float(nil, { focus = true })
 end, opts)
 
+-- Github copilot
+vim.keymap.set("n", "<leader>ce", ":CopilotEnable<CR>", { desc = "Enable Copilot" })
+vim.keymap.set("n", "<leader>cd", ":CopilotDisable<CR>", { desc = "Disable Copilot" })
+
+local copilot_enabled = true
+vim.api.nvim_set_keymap("n", "<leader>ct", "", {
+	callback = function()
+		copilot_enabled = not copilot_enabled
+		require("copilot.suggestion").toggle_auto_trigger(copilot_enabled)
+		vim.notify("Copilot " .. (copilot_enabled and "enabled" or "disabled"))
+	end,
+	desc = "Toggle Copilot",
+	noremap = true,
+	silent = true,
+})
+
 -- n, v, i, t = mode names
 
 local M = {}
