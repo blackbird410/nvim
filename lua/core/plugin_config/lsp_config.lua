@@ -28,13 +28,13 @@ require("lspconfig").lua_ls.setup {
   }
 }
 
-require("lspconfig").solargraph.setup({})
--- require("lspconfig").tsserver.setup({})
-require("lspconfig").ts_ls.setup({})
-require("lspconfig").gopls.setup({})
-require("lspconfig").tailwindcss.setup({})
-require('lspconfig').pyright.setup({})
-require('lspconfig').clangd.setup({})
+lspconfig.solargraph.setup({})
+-- lspconfig.tsserver.setup({})
+lspconfig.ts_ls.setup({})
+lspconfig.gopls.setup({})
+lspconfig.tailwindcss.setup({})
+lspconfig.pyright.setup({})
+lspconfig.clangd.setup({})
 
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('UserLspConfig', {}),
