@@ -20,6 +20,9 @@ vim.keymap.set('n', '<leader>fh', ':lua require("telescope.builtin").help_tags()
 -- Block math: $$...$$
 -- vim.keymap.set("i", "<Leader>M", "$$\n<++>\n$$<Esc>kA", { noremap = true })
 
+vim.keymap.set("n", "<leader>e", function()
+	vim.diagnostic.open_float(nil, { focus = true })
+end, opts)
 
 -- n, v, i, t = mode names
 
