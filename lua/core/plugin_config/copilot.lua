@@ -5,7 +5,7 @@ vim.cmd([[highlight CopilotSuggestion ctermfg=8 guifg=white guibg=#5c6370]])
 require("copilot").setup({
 	suggestion = {
 		enabled = true,
-		auto_trigger = true,
+		auto_trigger = false,
 		debounce = 75,
 		keymap = {
 			accept = "<M-l>",
@@ -22,7 +22,7 @@ vim.api.nvim_create_user_command("CopilotEnable", function()
 	-- Force reattach in case Copilot is not yet started
 	local copilot = require("copilot")
 	copilot.setup({ -- optional: reapply settings
-		suggestion = { auto_trigger = true },
+		suggestion = { auto_trigger = false },
 		panel = { enabled = false },
 	})
 
